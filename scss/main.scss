@@ -1,0 +1,38 @@
+$font-family-sans-serif: 'Roboto', sans-serif;
+$primary: #5265E1;
+$secondary: #FA5959;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$link-color:  $gray-700;
+$font-size-sm: $font-size-base * .75;
+
+h1 { font-weight: 400 }
+p  { color: $gray-500 }
+a  { color: $link-color }
+a:hover { color: $secondary }
+.fs-7 {font-size: $font-size-sm }
+
+.nav-link { letter-spacing: 2px; }
+.btn-sm, .btn-group-sm > .btn { padding: 0.65rem 1.4rem }
+.btn-login {
+    background:$secondary;
+    border:1px solid transparent;
+    border-radius: 0.2rem;
+    color: white;
+}
+.btn-login:hover {
+    border:1px solid $secondary;
+    background:none;
+    color: $secondary;
+}
+.btn-primary:hover { background:none; color: $primary; }
+.btn-light:hover { background:none; border-color: $gray-800; }
+
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem ; padding-left: 1.5rem ;
+    }
+}
