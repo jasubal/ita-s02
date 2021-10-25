@@ -11509,6 +11509,20 @@ a:hover {
   border-color: #343a40;
 }
 
+.nav-tabs .nav-link {
+  border: 2px solid transparent;
+}
+
+.nav-tabs .nav-link.active {
+  border: 2px solid white;
+  border-bottom: 2px solid #FA5959;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: transparent;
+  color: #FA5959;
+}
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1.5rem;

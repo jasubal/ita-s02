@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S2 Bootstrap&SASS</title>
+    <title>S-02 Bootstrap&Sass</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="css/main.css" >
 
@@ -34,26 +34,110 @@
        <!-- Page content-->
        <div class="container px-3">
 
-        <div id="intro" class="row ">
+        <div id="intro" class="row d-flex align-items-center">
 
-            <div class="col-md-6 my-2 order-md-2">
+            <div class="col-md-6 order-md-2">
               <img class="img-fluid" src="assets/illustration-hero.svg">
             </div>
 
-            <div class="col-md-6">
-                <div class="mt-5">
-                    <h1 class="text-center text-md-start">A simple Bookmark Manager</h1>
-                    <p class="text-center text-md-start">A clean and simple interface to organize your favourite
+            <div class="col-md-5 text-center text-md-start">
+                    <h1>A simple Bookmark Manager</h1>
+                    <p>A clean and simple interface to organize your favourite
                         websites. Open a new browser tab and see your sites load
                         instantly. Try it for free.</p>
-                        <button type="button" class="btn btn-primary btn-sm shadow-sm mx-2">Get it on Chrome </button>
+                        <button type="button" class="btn btn-primary btn-sm shadow-sm">Get it on Chrome </button>
                         <button type="button" class="btn btn-light btn-sm shadow-sm mx-2">Get it on Firefox</button>
-                </div>
+
             </div>
         </div><!-- #intro -->
 
 
-            <div id="features" class="row ">
+            <div id="features" class="row d-flex justify-content-center">
+
+<div class="col-md-6 mt-5 text-center">
+<h2>Features</h2>
+<p>Our aim is to make it quick and easy for you to access your
+    favourite websites. Your bookmarks sync between your devices
+    so you can access them on the go.</p>
+</div>
+
+
+
+<div class="row flex-column flex-sm-row  justify-content-center">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs col-md-8 my-5 justify-content-center" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="op1-tab" data-bs-toggle="tab" data-bs-target="#op1" type="button" role="tab" aria-controls="op1" aria-selected="true">Simple Bookmarking</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="op2-tab" data-bs-toggle="tab" data-bs-target="#op2" type="button" role="tab" aria-controls="op2" aria-selected="false">Speedy Searching</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="op3-tab" data-bs-toggle="tab" data-bs-target="#op3" type="button" role="tab" aria-controls="op3" aria-selected="false">Easy Sharing</button>
+    </li>
+
+  </ul>
+</div>
+
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="op1" role="tabpanel" aria-labelledby="op1-tab">
+
+        <div id="op1-content" class="row ">
+
+            <div class="col-md-6 my-2">
+              <img class="img-fluid" src="assets/illustration-features-tab-1.svg">
+            </div>
+
+            <div class="col-md-5 mt-5 text-center text-md-start">
+                    <h1>Bookmark in one click</h1>
+                    <p>Organize your bookmarks however you like. Our
+                        simple drag-and-drop interface gives you complete
+                        control over how you manage your favourite sites.</p>
+                        <button type="button" class="btn btn-primary btn-sm shadow-sm">More Info</button>
+
+
+            </div>
+        </div><!-- #op1-content -->
+
+    </div>
+    <div class="tab-pane" id="op2" role="tabpanel" aria-labelledby="op2-tab">
+        <div id="op2-content" class="row ">
+
+            <div class="col-md-6 my-2">
+              <img class="img-fluid" src="assets/illustration-features-tab-2.svg">
+            </div>
+
+            <div class="col-md-5 mt-5 text-center text-md-start">
+                    <h1>Speed Search</h1>
+                    <p>Nunc vel mollis leo, sit amet pharetra ex. Sed et pellentesque nulla. Donec vulputate aliquam nibh. Vivamus a gravida orci. Ut ac pretium arcu. </p>
+                        <button type="button" class="btn btn-primary btn-sm shadow-sm">More Info</button>
+
+
+            </div>
+        </div><!-- #op2-content -->
+    </div>
+    <div class="tab-pane" id="op3" role="tabpanel" aria-labelledby="op3-tab">
+        <div id="op3-content" class="row ">
+
+            <div class="col-md-6 my-2">
+              <img class="img-fluid" src="assets/illustration-features-tab-3.svg">
+            </div>
+
+            <div class="col-md-5 mt-5 text-center text-md-start">
+                    <h1>Share it instantly!</h1>
+                    <p>Etiam pretium tincidunt turpis, mollis porttitor ante pharetra non. Quisque vitae scelerisque lacus. Curabitur urna elit, pellentesque eget interdum eget, facilisis et mi. </p>
+                        <button type="button" class="btn btn-primary btn-sm shadow-sm">More Info</button>
+
+
+            </div>
+        </div><!-- #op3-content -->
+    </div>
+  </div>
+
+
+
 
             </div><!-- #features -->
 
@@ -68,5 +152,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
