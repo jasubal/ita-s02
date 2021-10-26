@@ -11,12 +11,47 @@ h1 { font-weight: 400 }
 p  { color: $gray-500 }
 a  { color: $link-color }
 a:hover { color: $secondary }
-.fs-7 {font-size: $font-size-sm }
-section { margin-bottom: 13vh; }
+.fs-7 {font-size: $font-size-base * 1.25; }
 
-.nav-link { letter-spacing: 2px; }
+section { margin-bottom: 13vh; }
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-toggler-icon {
+    background: url(../assets/ico-hamb.svg);
+}
+[aria-expanded="true"] {
+    background:  $gray-200;
+    box-shadow: none;
+}
+[aria-expanded="true"] .navbar-toggler-icon{
+    background: url(../assets/icon-close.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar-collapse.show {
+    background-color: #2e354ee8; margin: 1em 0 0; border-radius: 8px ;
+}
+.navbar-collapse .nav-link {
+ padding: 1em ; border-bottom: 1px solid;
+ opacity: 0;
+}
+.navbar-collapse.show .nav-link {
+    color: white; padding: 1em ; border-bottom: 1px solid;
+    opacity: 1;
+}
 .btn-sm, .btn-group-sm > .btn { padding: 0.65rem 1.4rem }
-.btn-login, .btn-submit {
+
+.navbar-collapse .nav-link.btn-login{
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 0.5em;
+    color: white;
+    margin: 1em;
+    padding: 10px;
+}
+
+.btn-submit {
     background:$secondary;
     border:1px solid transparent;
     border-radius: 0.2rem;
@@ -31,17 +66,30 @@ section { margin-bottom: 13vh; }
 .btn-primary:hover { background:none; color: $primary; }
 .btn-light:hover   { background:none; border-color: $gray-800; }
 
-.nav-tabs .nav-link {
-    border: 2px solid white;
-    border-bottom: 2px solid #dee2e6;
+
+#features .nav-tabs {
+    border-bottom: none;
+    width: auto;
 }
 
-.nav-tabs .nav-link.active{
+#features .nav-item {
+    width: 100%;
+    border-bottom: 1px solid $gray-200;
+}
+#features .nav-item .nav-link {
+    width: 100%;
+}
+
+.nav-tabs .nav-link {
+    border: 2px solid transparent;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-link.active:hover{
     border: 2px solid white;
     border-bottom: 2px solid $secondary;
 }
 .nav-tabs .nav-link:hover {
-    border-color: transparent;
+    border: 2px solid transparent;
     color: $secondary;
 }
 .nav-tabs { border-bottom: 0; }
@@ -49,7 +97,7 @@ section { margin-bottom: 13vh; }
     align-items: center;
     background: url(../assets/bg-dots.svg) no-repeat center 15em;
     border: none;
-    box-shadow: 2px 2px 10px 0 #e8e8e8;
+    box-shadow: 2px 2px 10px 0  $gray-200;
     margin: 1rem;
     padding: 2em 2em 0;
     width: 18rem;
@@ -62,8 +110,16 @@ section { margin-bottom: 13vh; }
     display: block;
     margin-bottom: 4em;
 }
-
+#faq .accordion-button::after {
+    background-image: url(../assets/icon-arrow.svg);
+    background-repeat: no-repeat;
+}
 #faq .accordion-button:hover { color: $secondary; }
+#faq .accordion-button:hover::after {
+    background-image: url(../assets/icon-arrow.svg);
+    background-repeat: no-repeat;
+}
+
 #faq .accordion-button:not(.collapsed) {
     background: none;
     color: $secondary;
@@ -72,10 +128,12 @@ section { margin-bottom: 13vh; }
     background: none;
     border: none;
     border-color: transparent;
+    box-shadow: none;
     outline: none;
 }
 
-footer .nav-link { color: #dad6d6; font-size: .8em; }
+footer .nav-link { color: #dad6d6; font-size: 1em; }
+footer .nav-link:hover { color: $secondary}
 .was-validated .form-control:invalid,
 .form-control.is-invalid {
     border-color: #dc3545;
@@ -89,10 +147,32 @@ footer .nav-link { color: #dad6d6; font-size: .8em; }
     padding: 4px;
     margin: 0; }
 
+.social-links a:hover img {
+    filter: invert(50%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
 
 @media (min-width: 992px) {
+    .fs-7 {font-size: $font-size-sm }
+    .navbar-collapse .nav-link.btn-login {
+        background:$secondary;
+        border:1px solid ;
+        border-radius: 0.25rem;
+        color: white;
+        margin: 0 2em;
+    }
+    .navbar-collapse .nav-link.btn-login:hover {
+        border:1px solid $secondary;
+        box-shadow: 2px 2px 2px $gray-200;
+        background:white;
+        color: $secondary;
+    }
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 1.5rem ; padding-left: 1.5rem ;
+        opacity: 1;
+        border-bottom: 1px solid transparent;
+    }
+    #features .nav-item {
+        width: auto; border-bottom: 1px solid $gray-200;
     }
     #download .card:nth-child(2n) {
         margin-top: 2em;
@@ -100,6 +180,8 @@ footer .nav-link { color: #dad6d6; font-size: .8em; }
     #download .card:nth-child(3n) {
         margin-top: 4em;
     }
-    footer input[type="email"]{ width: 320px ; }
+    footer .nav-link {font-size: .8em; }
+    footer input[type="email"]{
+        width: 100%; }
     .btn-submit { width: auto }
 }
