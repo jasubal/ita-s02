@@ -1,5 +1,5 @@
 {
-  "name": "ita-s2",
+  "name": "ita-s02",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jasubal/ita-s2.git"
+    "url": "git+https://github.com/jasubal/ita-s02.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jasubal/ita-s2/issues"
+    "url": "https://github.com/jasubal/ita-s02/issues"
   },
-  "homepage": "https://github.com/jasubal/ita-s2#readme",
+  "homepage": "https://github.com/jasubal/ita-s02#readme",
   "dependencies": {
     "bootstrap": "^5.0.0-beta3",
     "bootstrap-icons": "^1.6.1"
