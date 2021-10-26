@@ -11497,6 +11497,10 @@ section {
   color: white;
 }
 
+.btn-submit {
+  width: 100%;
+}
+
 .btn-login:hover, .btn-submit:hover {
   border: 1px solid #FA5959;
   background: white;
@@ -11514,7 +11518,8 @@ section {
 }
 
 .nav-tabs .nav-link {
-  border: 2px solid transparent;
+  border: 2px solid white;
+  border-bottom: 2px solid #dee2e6;
 }
 
 .nav-tabs .nav-link.active {
@@ -11525,6 +11530,10 @@ section {
 .nav-tabs .nav-link:hover {
   border-color: transparent;
   color: #FA5959;
+}
+
+.nav-tabs {
+  border-bottom: 0;
 }
 
 .card {
@@ -11561,13 +11570,21 @@ section {
 
 #faq .accordion-button:focus {
   background: none;
+  border: none;
   border-color: transparent;
+  outline: none;
+}
+
+footer .nav-link {
+  color: #dad6d6;
+  font-size: .8em;
 }
 
 .was-validated .form-control:invalid, .form-control.is-invalid {
   border-color: #dc3545;
   background-image: url(../assets/icon-error.svg);
   background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .invalid-feedback {
@@ -11589,7 +11606,10 @@ section {
     margin-top: 4em;
   }
   footer input[type="email"] {
-    width: 300px;
+    width: 320px;
+  }
+  .btn-submit {
+    width: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */
