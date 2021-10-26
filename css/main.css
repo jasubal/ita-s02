@@ -11478,6 +11478,10 @@ a:hover {
   font-size: 0.75rem;
 }
 
+section {
+  margin-bottom: 13vh;
+}
+
 .nav-link {
   letter-spacing: 2px;
 }
@@ -11486,16 +11490,16 @@ a:hover {
   padding: 0.65rem 1.4rem;
 }
 
-.btn-login {
+.btn-login, .btn-submit {
   background: #FA5959;
   border: 1px solid transparent;
   border-radius: 0.2rem;
   color: white;
 }
 
-.btn-login:hover {
+.btn-login:hover, .btn-submit:hover {
   border: 1px solid #FA5959;
-  background: none;
+  background: white;
   color: #FA5959;
 }
 
@@ -11546,6 +11550,33 @@ a:hover {
   margin-bottom: 4em;
 }
 
+#faq .accordion-button:hover {
+  color: #FA5959;
+}
+
+#faq .accordion-button:not(.collapsed) {
+  background: none;
+  color: #FA5959;
+}
+
+#faq .accordion-button:focus {
+  background: none;
+  border-color: transparent;
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+  border-color: #dc3545;
+  background-image: url(../assets/icon-error.svg);
+  background-repeat: no-repeat;
+}
+
+.invalid-feedback {
+  color: white;
+  background: red;
+  padding: 4px;
+  margin: 0;
+}
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1.5rem;
@@ -11556,6 +11587,9 @@ a:hover {
   }
   #download .card:nth-child(3n) {
     margin-top: 4em;
+  }
+  footer input[type="email"] {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=main.css.map */
